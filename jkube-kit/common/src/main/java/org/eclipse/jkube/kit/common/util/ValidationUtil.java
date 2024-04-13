@@ -42,7 +42,11 @@ public class ValidationUtil {
                     leafBean = "" + hasMetadata.getKind() + ": " + metadata;
                 }
             }
-            builder.append(violation.getPropertyPath() + " " + violation.getMessage() + " on bean: " + leafBean);
+            builder.append(violation.getPropertyPath());
+            builder.append(" ");
+            builder.append(violation.getMessage());
+            builder.append(" on bean: ");
+            builder.append(leafBean);
         }
         return builder.toString();
     }
